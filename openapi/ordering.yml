@@ -250,7 +250,7 @@ paths:
                   content:
                     type: array
                     items:
-                      $ref: "#/components/schemas/OrderSummary"
+                      $ref: "#/components/schemas/CustomerSummary"
   /api/v1/orders/{orderId}:
     get:
       tags:
@@ -760,10 +760,6 @@ components:
           type: string
           example: "GATEWAY_BALANCE"
           nullable: false
-        creditCardId:
-          type: string
-          example: "28fcd9fb-4ce7-44d6-9583-14d8b3dc5aff"
-          nullable: true
         shipping:
           $ref: "#/components/schemas/ShippingInput"
         billing:
@@ -783,10 +779,6 @@ components:
           type: string
           example: "GATEWAY_BALANCE"
           nullable: false
-        creditCardId:
-          type: string
-          example: "28fcd9fb-4ce7-44d6-9583-14d8b3dc5aff"
-          nullable: true
         shipping:
           $ref: "#/components/schemas/ShippingInput"
         billing:
@@ -806,7 +798,6 @@ components:
         - items
         - shipping
         - billing
-        - creditCardId
       properties:
         id:
           type: string
@@ -839,9 +830,6 @@ components:
           $ref: "#/components/schemas/OrderStatus"
         paymentMethod:
           $ref: "#/components/schemas/PaymentMethod"
-        creditCardId:
-          type: string
-          example: "28fcd9fb-4ce7-44d6-9583-14d8b3dc5aff"
         shipping:
           $ref: "#/components/schemas/Shipping"
         billing:
