@@ -201,14 +201,14 @@ components:
       schema:
         type: string
         example: "name"
-      name: sortByProperty
+      name: sort
       description: Order by property
       in: query
     direction:
       schema:
         type: string
         example: "desc"
-      name: sortDirection
+      name: direction
       description: Direction
       in: query
   schemas:
